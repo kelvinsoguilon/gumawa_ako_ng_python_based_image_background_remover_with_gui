@@ -14,3 +14,12 @@ class InterfaceBackgroundRemover:
         self.processor = BackgroundRemover()
         self.root = root
         self.root.title = "Background Remover"
+
+        #Make the ui centered when run
+        window_width = 800
+        window_height = 600
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+        x = (screen_width // 2) - (window_width // 2)
+        y = (screen_height // 2) - (window_height // 2)
+        self.root.geometry(f"{window_width}x{window_height}+{x}+{y}")
