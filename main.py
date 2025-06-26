@@ -49,10 +49,10 @@ class InterfaceBackgroundRemover:
         self.button_frame = tk.Frame(root)
         self.button_frame.pack(pady=20)
 
-        self.choose_button = tk.Button(root, text = "Choose Image", font = ("Arial", 12), command= self.choose_image)
+        self.choose_button = tk.Button(self.button_frame, text = "Choose Image", font = ("Arial", 12), command= self.choose_image)
         self.choose_button.grid(row=0, column=0, padx= 30)
 
-        self.save_button = tk.Button(root, text = "Save Image", font = ("Arial", 12), command=self.save_image, state=tk.DISABLED)
+        self.save_button = tk.Button(self.button_frame, text = "Save Image", font = ("Arial", 12), command=self.save_image, state=tk.DISABLED)
         self.save_button.grid(row = 0, column = 1, padx = 30)
 
         self.result_image = None
