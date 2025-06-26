@@ -23,3 +23,7 @@ class InterfaceBackgroundRemover:
         x = (screen_width // 2) - (window_width // 2)
         y = (screen_height // 2) - (window_height // 2)
         self.root.geometry(f"{window_width}x{window_height}+{x}+{y}")
+
+        #title box in window panel
+        self.title_label = tk.Label(root, text = "Image Background Remover", font = ("Arial", 20))
+        self.title_label.pack(pady=10)
