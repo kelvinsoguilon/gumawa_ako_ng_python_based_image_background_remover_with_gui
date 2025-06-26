@@ -5,7 +5,7 @@ class BackgroundRemover(ImageProcessor):
     def process_image(self):
         if self._image:
             try:
-                return remove(self.image)
+                return remove(self._image)
             except Exception as error:
                 print("Error processing image: ", error)
                 return None

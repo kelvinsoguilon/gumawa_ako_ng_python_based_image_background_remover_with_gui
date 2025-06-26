@@ -62,7 +62,7 @@ class InterfaceBackgroundRemover:
     def choose_image(self):
         filepath = filedialog.askopenfilename(filetypes=[("Image files", "*.png *.jpg *.jpeg *.webp")])
         if filepath and self.processor.load_image(filepath):
-            original_image = self.processor.get_original_image
+            original_image = self.processor.get_original_image()
             original_tk = ImageTk.PhotoImage(original_image)
             self.original_image_box.config(image=original_tk)
             self.original_image_box.image = original_tk
