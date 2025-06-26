@@ -20,3 +20,6 @@ class ImageProcessor:
     
     def get_original_image(self):
         return self.original_image_pil
+    
+    def process_image(self):
+        raise NotImplementedError("Subclasses should implement image processing.")
