@@ -9,4 +9,4 @@ class BackgroundRemover(ImageProcessor):
             except Exception as error:
                 print("Error processing image: ", error)
                 return None
-            return None
+        return None
