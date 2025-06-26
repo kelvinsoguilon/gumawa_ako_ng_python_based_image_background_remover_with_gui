@@ -94,3 +94,8 @@ class InterfaceBackgroundRemover:
             if save_path:
                 self.result_image.save(save_path)
                 messagebox.showinfo("Saved", f"Image saved to:\n{save_path}")
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = InterfaceBackgroundRemover(root)
+    root.mainloop()
