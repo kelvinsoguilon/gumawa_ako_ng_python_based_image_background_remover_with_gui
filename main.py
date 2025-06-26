@@ -75,3 +75,16 @@ class InterfaceBackgroundRemover:
                 self.result_image_box.image = result_tk
 
                 self.save_button.config(state= tk.NORMAL)
+
+                if not self.original_label:
+                    self.original_label = tk.Label(self.label_frame, text="Original Image", font=("Arial", 12))
+                    self.original_label.grid(row=0, column=0, padx=100, pady=5)
+
+                if not self.processed_label:
+                    self.processed_label = tk.Label(self.label_frame, text="Background Removed", font=("Arial", 12))
+                    self.processed_label.grid(row=0, column=1, padx=100, pady=5)
+            else:
+                messagebox.showerror("Error", "Failed to remove background.")
+        else:
+            messagebox.showwarning("Warning", "No image selected or failed to load.")
+            
