@@ -27,3 +27,10 @@ class InterfaceBackgroundRemover:
         #title box in window panel
         self.title_label = tk.Label(root, text = "Image Background Remover", font = ("Arial", 20))
         self.title_label.pack(pady=10)
+
+        #image type
+        self.label_frame = tk.Frame(root)
+        self.label_frame.pack()
+
+        self.original_label = None
+        self.processed_label = None
