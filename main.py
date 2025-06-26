@@ -66,3 +66,12 @@ class InterfaceBackgroundRemover:
             original_tk = ImageTk.PhotoImage(original_image)
             self.original_image_box.config(image=original_tk)
             self.original_image_box.image = original_tk
+
+            result = self.processor.process_image()
+            if result:
+                self.result_image = Image.open(io.BytesIO(result)).convert("RGBA")
+                result_tk = ImageTk.PhotoImage(self.result_image)
+                self.result_image_box.config(image = result_tk)
+                self.result_image_box.image = result_tk
+
+                self.save_button.config(state= tk.NORMAL)
