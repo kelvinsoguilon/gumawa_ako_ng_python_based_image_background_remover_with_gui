@@ -34,3 +34,14 @@ class InterfaceBackgroundRemover:
 
         self.original_label = None
         self.processed_label = None
+
+        #image display comparison in UI
+        self.image_frame = tk.Frame(root)
+        self.image_frame.pack()
+
+        self.original_image_box = tk.Label(self.image_frame)
+        self.original_image_box.grid(row=0, column=0, padx=30)
+
+        self.result_image_box = tk.Label(self.image_frame)
+        self.result_image_box.grid(row=0, column=1, padx=30)
+        
