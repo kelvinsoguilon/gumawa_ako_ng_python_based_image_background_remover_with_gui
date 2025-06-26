@@ -88,3 +88,9 @@ class InterfaceBackgroundRemover:
         else:
             messagebox.showwarning("Warning", "No image selected or failed to load.")
             
+    def save_image(self):
+        if self.result_image:
+            save_path = filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png")])
+            if save_path:
+                self.result_image.save(save_path)
+                messagebox.showinfo("Saved", f"Image saved to:\n{save_path}")
