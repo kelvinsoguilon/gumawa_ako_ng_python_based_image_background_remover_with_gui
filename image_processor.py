@@ -14,3 +14,6 @@ class ImageProcessor:
         except Exception as error:
             print(f"Error Loading image: {error}")
             return False
+
+    def get_image_data(self):
+        return self._image
