@@ -17,3 +17,6 @@ class ImageProcessor:
 
     def get_image_data(self):
         return self._image
+    
+    def get_original_image(self):
+        return self.original_image_pil
