@@ -1,7 +1,7 @@
 from image_processor import ImageProcessor
 from rembg import remove
 
-class BackgroundRemover:
+class BackgroundRemover(ImageProcessor):
     def process_image(self):
         if self._image:
             try:
